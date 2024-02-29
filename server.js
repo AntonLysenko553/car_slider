@@ -1,4 +1,4 @@
-import * as http from "node:http";
+import * as https from "node:https";
 import * as fs from "node:fs";
 let filesArray = fs.readdirSync("public/images/asset");
 let forTransfer = JSON.stringify(filesArray);
@@ -15,7 +15,7 @@ function responseActions(responseObject, fileData, isIndex, isSvg) {
         responseObject.end();
     }
 }
-const server = http.createServer(function (request, response) {
+const server = https.createServer(function (request, response) {
     if(request.url === "/") {
         response.statusCode = 301;
         response.setHeader("Location", "/public/index.html");

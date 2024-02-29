@@ -1,6 +1,6 @@
 import * as https from "node:https";
 import * as fs from "node:fs";
-let filesArray = fs.readdirSync("/public/images/asset");
+let filesArray = fs.readdirSync("public/images/asset");
 let forTransfer = JSON.stringify(filesArray);
 function responseActions(responseObject, fileData, isIndex, isSvg) {
     responseObject.statusCode = 200;

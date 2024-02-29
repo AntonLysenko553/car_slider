@@ -1,0 +1,61 @@
+*:not(html):not(body) {
+  position: relative;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  margin-top: 8px;
+}
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.body__preload {
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body__images-container {
+  width: 90%;
+  height: 934px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transition: background-image 1.5s;
+  margin: 0 auto;
+}
+.body__previous-slide {
+  background-image: url("../images/previous_orig.svg");
+  margin-left: 15px;
+}
+.body__previous-slide:active {
+  background-image: url("../images/previous_clicked.svg");
+}
+.button {
+  width: 50px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+  transition: transform 0.75s;
+  border-radius: 4px;
+}
+.button:hover {
+  transform: scale(1.4, 1.4);
+}
+.body__next-slide {
+  background-image: url("../images/next_orig.svg");
+  margin-right: 15px;
+}
+.body__next-slide:active {
+  background-image: url("../images/next_clicked.svg");
+}

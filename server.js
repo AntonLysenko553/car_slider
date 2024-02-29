@@ -16,7 +16,7 @@ function responseActions(responseObject, fileData, isIndex, isSvg) {
     }
 }
 const server = https.createServer(function (request, response) {
-    if(request.url.startsWith("/public")) {
+    if(request.url.startsWith("public")) {
         if(request.url.endsWith("index.html")) {
             fs.readFile(request.url, function (error, data) {
                 responseActions(response, data, true, false);
